@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script >
+        var idade=1980;
+        var ano=2023;
+        var idade2=1981;
+        var idade3=1984;
+      
+        
+         var produto="1 Visão do produto";
+    var entidade="2. Entidades importantes";
+    var requisitos="3. Requisitos não funcionais";
+    var funcionais="4. Requisitos funcionais";
+    alert("***Bem vindo ao Comex***");
+        function cabecalho (){    alert("***Bem vindo ao Comex***");
+        document.write("<h1> >> COMEX << </h1>"); 
+        document.write ("<b> :: Lista de Clientes :: </b>");
+        document.write ( "<br> <br>");
+      
+    }
+        function conteudo (nome,mes,ano){ document.write("<hr>");
+       
+        document.write ("<b> - Código 1 </b>") ;
+        document.write ("<br> <br>");
+        document.write ("Nome: "+nome);
+        document.write ("<br> <br>");
+        document.write ("Mês de nascimento: "+mes);
+        document.write ("<br> <br>");
+        document.write ("Ano de Nascimento: "+ano);
+        document.write ("<br>");
+      
+    
+    
+    }
+        function rodape (){document.write ("<h2>");
+            document.write ("<b> .:: Alura LEVEL UP ::. </b>");
+            document.write ("</h2>");}
+function soma(a){
+
+    docment.write(a);
+}
+            cabecalho();
+            conteudo("Fulano", "Fevereiro", idade);
+            conteudo("Beltrano", "Maio", idade2);
+            conteudo("Sicrano", "Novembro", idade3);
+            document.write ("<hr>");
+            document.write ("*** Estástísticas***");
+            document.write ("<br>");
+            document.write ("Somas das médias idades:");
+            soma(idade)
+            
+            document.write ("<br>");
+            document.write ("Média das Idades: 40");
+            document.write ("<hr>");
+            rodape();
+
+    </script>
+
+</body>
+</html>
