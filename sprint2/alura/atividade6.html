@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+   content="width=device-width, initial-scale=1.0"
+    <title>Lista de cliente</title>
+</head>
+
+<body>
+
+    <script>
+
+alert("BEM VINDO AO COMEX");
+
+function escreva(texto) {
+    document.write(texto);
+}
+
+ function pulaLinha(){
+    document.write("<br>");
+    document.write("<br>");
+
+ }
+function linha() {
+    document.write("<hr>");
+}
+function titulo(texto) {
+    document.write("<h1>" + texto + "</h1>");
+    linha();
+    pulaLinha();
+}
+function mostraConteudo(texto) {
+    document.write("<h5>" + texto + "</h5>");
+    pulaLinha();
+}
+function facaCodigo(indice) {
+    document.write("<h3> -" + conteudo1 + indice + "</h3>");
+}
+function facaRodape(texto) {
+    linha();
+    document.write("<h2>" + texto + "</h2>");
+   
+}
+
+var titulo = ">>COMEX<<";
+var subtitulo = ".::Lista de Clientes::.";
+var conteudo1 = "CÓDIGO ";
+
+var ano = window.prompt("INFORME O ANO: ");
+var mes = window.prompt("INFORME O MÊS: ");
+
+titulo(titulo);
+titulo(subtitulo);
+
+var totalIdades = 0;
+var NumeroDePessoas = window.prompt("QUANTIDADE DE PESSOAS:");
+
+for (var i = 0; i < NumeroDePessoas; i++) {
+    facaCodigo(i + 1);
+
+    var nome1 = window.prompt("NOME DOS CLIENTES: " + (i + 1));
+    var anoNascimento = window.prompt("ANO DE NASCIMENTO: " + (i +1));
+
+    document.write("<ul>");
+
+    document.write("<li>" + "NOME: " + nome1 + "</li>");
+    pulaLinha();
+    
+    document.write("<li>" + "MES DE NASCIMENTO: " + mes + "</li>");
+     pulaLinha();
+     
+    document.write("<li>" + "ANO DE NASCIMENTO: " + anoNascimento + "</li>");
+    pulaLinha();
+
+    var idade = ano - anoNascimento;
+
+    if (idade <= 17) {
+        
+        escreva("<li>Classificação Etária: ADOSLESCENTE</li>");
+    }
+    else if (idade <= 29) {
+        escreva("<li>Classificação Etária: JOVEM ADULTO</li>");
+       
+    } else if (idade <= 59) {
+        escreva("<li>Classificação Etária: ADULTO</li>");
+       
+    } else if (idade >= 60) {
+        escreva("<li>Classificação Etária: IDOSA/O</li>");
+        
+    } else {
+        
+        escreva("<li>TEMOS UM PROBLEMA</li>");
+        document.write("</ul>");
+        
+    }
+    totalIDades += idade;
+    console.log(totalIDades)
+}
+linha();
+escreva("<p>");
+escreva("**ESTATÍSTICA**")
+
+pulaLinha();
+escreva("SOMA DAS IDADES: " + totalIDades);
+
+pulaLinha();
+var media = totalIDades / NumeroDePessoas
+escreva("A MÉDIA É: " + media);
+
+facaRodape(".::ALURA Level UP::.");
+
+    </script
+
+</body>
+</html>
