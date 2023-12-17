@@ -1,15 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Clientes</title>
-
-    
+    <title>Registro de clientes</title>
 </head>
+
 <body>
 
+    <script>
+  
+      alert("***SEJA BEM VINDO AO COMEX***");
+      
+      function linha(){
+          document.write(" <hr>");
+      }
+      
+      function pulaLinha(){
+          document.write("<br><br>");
+      }
+      
+      function mostraTitulo(texto){
+          document.write("<h1>"+"&gt;&gt;"+texto+"&lt;&lt;"+"</h1>");
+          
+          linha();
+          pulaLinha();
+      
+      }
+      function mostraConteudo(texto){
+      
+          document.write("<h2>"+texto+"</h2>");
+          pulaLinha();
+      
+      }
+      function facaCodigo(texto){
+      
+      document.write("<h2> - "+texto+"</h2>");
+      
+      }
+      function facaRodape(texto){
+          linha();
+          document.write("<h2>"+texto+"</h2>");
+          pulaLinha();
+      
+      }
+      
+      var titulo = "COMEX";
+      var primeiro = "LISTA DE CLIENTES";
+      var segundo = "CODIGO ";
+  
+      var mes1 = "JANEIRO";
+      var mes2 = "MARÇO";
+      var mes3 = "AGOSTO";
+      
+      mostraTitulo(titulo);
+      document.write("<h2>"+"CADASTRO DO CLIENTE"+"</h2>");
+        pulaLinha();
+        
+        document.write("CADASTRAR NOME DO CLIENTE:");
+        pulaLinha();
+        
+        document.write("<input type='text'>");
+        document.write("<button>Cria</button>");
+        var input = document.querySelector("inpu");
+        var button = document.querySelector("button");
+   
+      mostraConteudo(primeiro);
+      linha();
 
-    
+    function exibir(){
+        window.alert("***Alterado***");
+        mostraTitulo(titulo);
+        pulaLinha();
+        
+        document.write("<input type='text'>");
+        document.write("<button>Mostra lista</button>");
+        
+        var button = document.querySelector("button");
+        function lista(){
+        
+            document.write("<li>"+"NOME: "+input.value+"</li>");
+        }
+        
+        button.onclick =  lista;
+        mostraConteudo(primeiro);
+        linha();
+        
+        document.write("<li>"+"NOME: "+input.value+"</li>");
+        facaRodape("ALURA LEVEL UP");
+        mostraTitulo("lista");
+    }
+      
+      document.write("<li>"+"NOME: "+input.value+"</li>");
+
+        button.onclick =  exibir;
+     
+      facaRodape(".::ALURA LEVEL UP::.");
+      
+      </script>
+  
 </body>
 </html>
