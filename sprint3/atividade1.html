@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1</title>
+</head>
+
+<body>
+    <script>
+        let anoAtual = parseInt(prompt("Insira o ano atual: "));
+        if (anoAtual <= 0) {
+            alert ("Digite um ano válido!")
+            location.reload();
+        } else {
+            let numeroClientes = parseInt(prompt("Quantos clientes? "));
+            if (numeroClientes <= 0) {
+                alert ("Digite uma quantidade válida!")
+            }
+        }
+        let idadesTotal = 0;
+        let counter = 0;
+        
+        function pulaLinha() {
+            document.write("<br>")
+        }
+
+       function    mostrarCabecalho() {
+            document.write("<h1> COMEX </h1>")
+            document.write("<h2> Lista de Clientes</h2>");
+            document.write("<hr>");
+        }
+
+        function clientes() {
+            while (counter < numeroClientes) {
+                counter++;
+                let nome = prompt("Qual o nome do " + counter +"° cliente")
+                let mesNascimento = prompt("Qual o mês de nascimento do cliente "+  counter +" ?")
+                let anoNascimento = prompt("Qual o ano de nascimento do cliente "+ counter +" ?")
+                let idade = anoAtual - anoNascimento
+                
+                document.write("<h2> - Código: " + counter + "</h2>")
+                pulaLinha
+    ();
+                document.write("Nome: " + nome);
+                pulaLinha
+    ()
+                document.write("Mês de Nascimento: " + mesNascimento);
+                pulaLinha
+    ()
+                document.write("Ano de Nascimento: " + anoNascimento);
+                document.write("<hr>");
+
+                idadesTotal += idade;
+            }
+        }
+
+        function mostrarEstatisticas() {
+            document.write("ESTATISTICA ")
+            pulaLinha
+();
+            document.write("Soma de Idades: " + idadesTotal)
+            pulaLinha
+();
+            document.write("Média das Idades: " + Math.round(idadesTotal/numeroClientes));
+        }
+
+        function mostrarRodape() {
+            document.write("<br><hr><p>.::Alura LEVEL UP::.</p>");
+        }
+
+        mostrarCabecalho();
+        clientes();
+        mostrarEstatisticas();
+        mostrarRodape();
+
+    </script>
+</body>
+</html>
