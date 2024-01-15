@@ -1,5 +1,5 @@
 --atividade 1
-CREATE TABLE pedido (
+CREATE TABLE pedidos (
     id BIGINT PRIMARY KEY,
     produto VARCHAR(255),
     categoria VARCHAR(255),
